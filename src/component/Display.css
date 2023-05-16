@@ -1,8 +1,8 @@
 .component-display {
-  background-color: #858694;
-  color: white;
+  background-color: #ead7d7;
+  color: #412234;
   text-align: right;
-  font-weight: 200;
+  font-weight: 100;
   flex: 0 0 auto;
   width: 100%;
 }
