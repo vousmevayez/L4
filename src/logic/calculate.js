@@ -1,5 +1,4 @@
 import Big from "big.js";
-
 import operate from "./operate";
 import isNumber from "./isNumber";
 
@@ -91,16 +90,85 @@ export default function calculate(obj, buttonName) {
     }
   }
 
-  // if (buttonName === "+/-") {
-  //   if (obj.next) {
-  //     return { next: (-1 * parseFloat(obj.next)).toString() };
-  //   }
-  //   if (obj.total) {
-  //     return { total: (-1 * parseFloat(obj.total)).toString() };
-  //   }
-  //   return {};
-  // }
+  if (buttonName === "+/-") {
+    if (obj.next) {
+      return { next: (-1 * parseFloat(obj.next)).toString() };
+    }
+    if (obj.total) {
+      return { total: (-1 * parseFloat(obj.total)).toString() };
+    }
+    return {};
+  }
 
+  if (buttonName === "sqrt") {
+    if (obj.next) {
+      return { next: Math.sqrt(obj.next).toString() };
+    }
+    if (obj.total) {
+      return { total: Math.sqrt(obj.next).toString() };
+    }
+    return {};
+  }
+
+  if (buttonName === "abs") {
+    if (obj.next) {
+      return { next: Math.abs(obj.next).toString() };
+    }
+    if (obj.total) {
+      return { total: Math.abs(obj.next).toString() };
+    }
+    return {};
+  }
+
+  if (buttonName === "Deg") {
+    if (obj.next) {
+      return {
+        next: Big(obj.next)
+          .div(Math.PI)
+          .times(180)
+          .toString(),
+      };
+    }
+    if (obj.total) {
+      return {
+        total: Big(obj.total)
+          .div(Math.PI)
+          .times(180)
+          .toString(),
+      };
+    }
+    return {};
+  }
+
+  if (buttonName === "sin") {
+    if (obj.next) {
+      return { next: Math.sin(obj.next).toString() };
+    }
+    if (obj.total) {
+      return { total: Math.sin(obj.next).toString() };
+    }
+    return {};
+  }
+
+  if (buttonName === "cos") {
+    if (obj.next) {
+      return { next: Math.cos(obj.next).toString() };
+    }
+    if (obj.total) {
+      return { total: Math.cos(obj.next).toString() };
+    }
+    return {};
+  }
+
+  if (buttonName === "tan") {
+    if (obj.next) {
+      return { next: Math.tan(obj.next).toString() };
+    }
+    if (obj.total) {
+      return { total: Math.tan(obj.next).toString() };
+    }
+    return {};
+  }
   // Button must be an operation
 
   // When the user presses an operation button without having entered

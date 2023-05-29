@@ -22,26 +22,6 @@ export default function operate(numberOne, numberTwo, operation) {
       return one.div(two).toString();
     }
   }
-  if (operation === "ln") {
-    return one.times(two).toString();
-  }
-  if (operation === "e") {
-    return one.toExponential(two).toString();
-  }
-  if (operation === "cos") {
-    return one.times(two).toString();
-  }
-  if (operation === "sin") {
-    return one.times(two).toString();
-  }
-  if (operation === "tan") {
-    return one.times(two).toString();
-  }
-  if (operation === "sqrt") {
-    return one.sqrt(two).toString();
-  }
-  if (operation === "abs") {
-    return one.abs(two).toString();
-  }
+
   throw Error(`Unknown operation '${operation}'`);
 }
