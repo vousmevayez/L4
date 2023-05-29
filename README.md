@@ -21,3 +21,10 @@ Usage
 ---
 
 `npm start`
+
+
+
+Forked from
+---
+
+ahfarmer: https://github.com/ahfarmer/calculator
